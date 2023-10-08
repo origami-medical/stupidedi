@@ -234,7 +234,7 @@ module Stupidedi
       # @return [Either<Result<Symbol, TokenReader>>]
       def read_segment_id
         position = 0
-        buffer   = String.new("")
+        buffer   = ""
 
         while true
           unless @input.defined_at?(position)
@@ -253,7 +253,7 @@ module Stupidedi
               break
             end
 
-            buffer << character
+            buffer = buffer + character
           end
         end
 
